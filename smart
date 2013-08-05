@@ -1,0 +1,7 @@
+# http://www.jpeg.org/jbig/index.html
+LIBRARY := jbig.a
+SOURCES := jbig.c jbig_tab.c
+CFLAGS := $(filter-out -Werror=nested-externs,$(CFLAGS))
+
+EXPORT.INCLUDES := $(SRCDIR)
+EXPORT.LOADLIBS := $(SRCDIR)/jbig.a
